@@ -21,17 +21,17 @@ int main() {
     // game loop
     while (1) {
 
-        int max = 0;
-        int mountainXH;
+        int max = 0;//объявляем переменную для хранения максимальной высоты
+        int mountainXH;//переменная для i
 
-        for (int i = 0; i < 8; i++) {
-            int mountainH; // //represents the height of one mountain.
+        for (int i = 0; i < 8; i++) {//объявляем цикл for от 0 до 8 с шагом 1
+            int mountainH;//represents the height of one mountain.
 
             cin >> mountainH;
             cin.ignore();
-            if (mountainH > max) {
-                max = mountainH;
-                mountainXH = i;
+            if (mountainH > max) {//сравниваем высоту текущей горы с max
+                max = mountainH;//если условие выполнеяется, то записываем в max высоту горы
+                mountainXH = i;//храним i в отдельной переменной, для того чтобы знать номер горы с наибольшой высотой
             }
             // cerr << mountainH << endl;
         }
