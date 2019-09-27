@@ -26,30 +26,31 @@ int main() {
     // game loop
     while (1) {
         int remainingTurns; // The remaining amount of turns Thor can move. Do not remove this line.
-        string str1 = "";
+        string str1 = "";//объявляем пустые строковые переменные str1 и str2
         string str2 = "";
         cin >> remainingTurns;
         cin.ignore();
-        if (initialTX < lightX) {
-            str2 = "E";
-            initialTX = initialTX + 1;
+        if (initialTX < lightX) {//сравниваем x Тора с x-ом молнии
+            str2 = "E";//Если условие выполняется, то Тор движется в направлении "E"
+            initialTX = initialTX + 1;//считаем абциссу Тора
         }
 
-        if (initialTY > lightY) {
-            str1 = "N";
-            initialTY = initialTY - 1;
+        if (initialTY > lightY) {//сравниваем у Тора с y-ом молнии
+            str1 = "N";//Если условие выполняется, то Тор движется в направлении "N"
+            initialTY = initialTY - 1;//считаем ординату Тора
         }
 
-        if (initialTY < lightY) {
-            str1 = "S";
-            initialTY = initialTY + 1;
+        if (initialTY < lightY) {//сравниваем у Тора с y-ом молнии
+            str1 = "S";//Если условие выполняется, то Тор движется в направлении "S"
+            initialTY = initialTY + 1;//считаем ординату Тора
         }
 
-        if (initialTX > lightX) {
-            str2 = "W";
-            initialTX = initialTX - 1;
+        if (initialTX > lightX) {//сравниваем x Тора с x-ом молнии
+            str2 = "W";//Если условие выполняется, то Тор движется в направлении "W"
+            initialTX = initialTX - 1;//считаем абциссу Тора
         }
-        cout << str1 + str2 << endl;
+        cout << str1 + str2 << endl;//складываем ответы при выполнении двух условий, чтобы двигаться в направлениях NE, SE, SW, NW
+									//координаты Тора считаем для того, чтобы при окончании хода по "диагонали", Тор продолжил ходить по "простым" направлениям
         cerr << remainingTurns << endl;
         cerr << "SE" << endl;
 
